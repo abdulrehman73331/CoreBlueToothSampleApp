@@ -54,7 +54,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         //you are going to use the name here down here ⇩
         
-      //  if peripheral.name == "VTM 20F" { //if is it my peripheral, then connect
+        //  if peripheral.name == "VTM 20F" { //if is it my peripheral, then connect
         if peripheral.name == "A&D_UA-651BLE_86FB2F"{
             self.myBluetoothPeripheral = peripheral     //save peripheral
             self.myBluetoothPeripheral.delegate = self
@@ -117,13 +117,13 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             print("length is :\(readValue?.count)")
             let arrayBytes = readValue?.bytes
             print("BP BYTES ARE :\(arrayBytes)")
-//            if readValue?.count == 10{
-//                let arrayBytes = readValue?.bytes
-//                if let sp02 = arrayBytes?[5], let byte3 = arrayBytes?[3], let byte4 = arrayBytes?[4]{
-//                    let pr = (8 * Int(byte3)) + Int(byte4)
-//                    print("sp02 is :\(sp02) and pr is :\(pr)")
-//                }
-//            }
+            //            if readValue?.count == 10{
+            //                let arrayBytes = readValue?.bytes
+            //                if let sp02 = arrayBytes?[5], let byte3 = arrayBytes?[3], let byte4 = arrayBytes?[4]{
+            //                    let pr = (8 * Int(byte3)) + Int(byte4)
+            //                    print("sp02 is :\(sp02) and pr is :\(pr)")
+            //                }
+            //            }
         }
     }
     
