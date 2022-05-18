@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: Build and export iOS
-        uses: sparkfabrik/ios-build-action@v1.0.0
+        uses: hectorguerrini/build-ios-action@v1.0.4
         with:
           project-path: BlueetoothLE.xcodeproj
           p12-base64: ${{ secrets.P12_BASE64 }}
