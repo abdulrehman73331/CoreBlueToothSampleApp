@@ -12,7 +12,7 @@ jobs:
       - name: Build and export iOS
         uses: yukiarrr/ios-build-action@v1.4.0
         with:
-          project-path: ios/BluetoothLE.xcodeproj
+          project-path: BluetoothLE.xcodeproj
           export-method: development
           configuration: Release
           output-path: artifacts/releaseapp.ipa
