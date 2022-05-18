@@ -19,5 +19,6 @@ jobs:
           export-options: ./ios/Options.plist
           p12-base64: ${{ secrets.P12_BASE64 }}
           mobileprovision-base64: ${{ secrets.DEV_MOBILEPROVISION_BASE64 }}
+          code-signing-identity: iPhone Developer
           
 
