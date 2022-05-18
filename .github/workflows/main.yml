@@ -12,7 +12,7 @@ jobs:
       - name: Build and export iOS
         uses: hectorguerrini/build-ios-action@v1.0.4
         with:
-          project-path: BlueetoothLE.xcodeproj
+          project-path: BluetoothLE.xcodeproj
           p12-base64: ${{ secrets.P12_BASE64 }}
           mobileprovision-base64: ${{ secrets.DEV_MOBILEPROVISION_BASE64 }}
 
