@@ -10,12 +10,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: Build and export iOS
-        uses: yukiarrr/ios-build-action@v1.4.0
+        uses: yukiarrr/ios-build-action@v1.5.0
         with:
           project-path: BluetoothLE.xcodeproj
           export-method: development
           configuration: Release
           output-path: artifacts/releaseapp.ipa
+          export-options: ./ios/Options.plist
           p12-base64: ${{ secrets.P12_BASE64 }}
           mobileprovision-base64: ${{ secrets.DEV_MOBILEPROVISION_BASE64 }}
+          
 
