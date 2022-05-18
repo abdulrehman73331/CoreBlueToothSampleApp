@@ -6,14 +6,15 @@ jobs:
   test:
     name: Test
     runs-on: macos-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=15.2,name=iPhone 11 Pro Max']
     steps:
       - name: Checkout
         uses: actions/checkout@main
-      - name: Build
-        run: |
-          xcodebuild clean build -project BluetoothLE.xcodeproj -scheme BluetoothLE -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-        env: 
-         destination: ${{ matrix.destination }}
+      - name: Build and export iOS
+        uses: yukiarrr/ios-build-action@v1.4.0
+        with:
+          export-method: development
+          configuration: Release
+          output-path: artifacts/releaseapp.ipa
+          p12-base64: ${{ secrets.P12_BASE64 }}
+          mobileprovision-base64: ${{ secrets.DEV_MOBILEPROVISION_BASE64 }}
+
