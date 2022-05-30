@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   test:
-    name: Test
+    name: Test1
     runs-on: macos-latest
     steps:
       - name: Checkout
